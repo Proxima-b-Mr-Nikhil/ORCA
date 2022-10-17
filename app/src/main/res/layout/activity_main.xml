@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6">
+
+    <ScrollView
+        android:id="@+id/body_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/profile_image"
+                        android:src="@mipmap/logo"/>
+
+                    <TextView
+                        android:text="Hey there!
+Welcome to Orca! Are you worried or looking for help? You have found the right place! We are here just for you 😊"
+                        android:fontFamily="@font/helvetica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/a"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:background="@drawable/background_left"/>
+
+                    <TextView
+                        android:layout_below="@id/a"
+                        android:id="@+id/b"
+                        android:text="We will require you to answer a few questions in order to help us understand you better. We promise it won't be long!"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/helvetica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:background="@drawable/background_left"/>
+                    <TextView
+                        android:id="@+id/c"
+                        android:text="Based on your responses, we will assign you tasks spread over 50 days that are sure to be fun and enjoyable! We need your consent to proceed with the next steps"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/b"
+                        android:fontFamily="@font/helvetica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:background="@drawable/background_left"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+<LinearLayout
+    android:layout_marginStart="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/m"
+                    android:text="Waiting for confirmation..."
+                    android:fontFamily="@font/helvetica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_right"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:padding="8dp"
+                    android:layout_alignParentRight="true" />
+                <TextView
+                    android:visibility="gone"
+
+                    android:id="@+id/confirm"
+                    android:fontFamily="@font/helvetica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_right"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:padding="8dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/confirm"
+                    android:fontFamily="@font/helvetica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_right"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/wait"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:padding="8dp"
+                    android:layout_alignParentRight="true" />
+
+
+            </RelativeLayout>
+</LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:id="@+id/bottom"
+        android:background="@drawable/rectchart"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:editable="false"
+            android:text="I agree to the terms and conditions "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="200dp"
+            android:textSize="16dp"
+            android:id="@+id/msg"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@id/btn_send"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_send_black_24dp"
+            android:id="@+id/btn_send"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
